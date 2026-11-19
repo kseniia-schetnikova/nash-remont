@@ -169,8 +169,12 @@ input[type=range]{width:100%;accent-color:var(--green);height:30px}
 .ph-stars{color:#F5A623;letter-spacing:2px;margin-top:10px;font-size:15px}
 .ph-what{font-size:12px;color:#7A7A7A;margin-top:2px}
 .ph-card p{font-size:14px;line-height:1.5;margin-top:10px}
+.ph-chip{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:10px;background:var(--yellow);color:var(--ink);font:600 11px/1.4 var(--sans);letter-spacing:0;vertical-align:2px}
 .ph-photos{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
-.ph-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.ph-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;cursor:zoom-in}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:60;padding:16px;cursor:zoom-out}
+.lb.show{display:flex}
+.lb img{height:min(88vh,1000px);width:auto;max-width:100%;object-fit:contain;border-radius:8px}
 
 /* вопросы */
 .faq-wrap{display:grid;grid-template-columns:4fr 8fr;gap:48px;align-items:start}
@@ -652,10 +656,32 @@ footer a{color:#D3DED6}
         <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
         <div class="ph-card">
           <div class="ph-who"><span class="ph-ava">П</span><span><b>Пользователь</b><small>11 марта 2026</small></span></div>
-          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★ <span class="ph-chip">4 фото ↓</span></div>
           <div class="ph-what">Поклейка обоев, штукатурно-малярные работы</div>
           <p>Ксения, огромное спасибо за качественно выполненную поклейку обоев, мастер от бога, спасибо за уроки, сама никогда так не отшпаклюю и не поклею. Дай вам бог здоровья и не проблемных заказчиков. Спасибо!!!)))</p>
           <div class="ph-photos"><img src="img/rev-room-1.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"><img src="img/rev-room-2.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"><img src="img/rev-room-3.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"><img src="img/rev-room-4.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"></div>
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Ц</span><span><b>Цветкова</b><small>9 июля 2026</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★ <span class="ph-chip">4 фото ↓</span></div>
+          <div class="ph-what">Ремонт квартиры</div>
+          <p>Обратились в компанию Наш ремонт для проведения ремонта в квартире. Меньше чем за полтора месяца работы были выполнены, чем мы очень довольны. Ребята молодцы, всегда на связи, проблем не было. Отдельная благодарность мастеру Вячеславу всё сделал аккуратно и на совесть! Всем рекомендую! Отзыв реальный, фото прилагаю) Удачи и процветания вам, ребята!</p>
+          <div class="ph-photos"><img src="img/rev-cv-1.webp" alt="Фото клиента к отзыву: квартира после ремонта" loading="lazy"><img src="img/rev-cv-2.webp" alt="Фото клиента к отзыву: квартира после ремонта" loading="lazy"><img src="img/rev-cv-3.webp" alt="Фото клиента к отзыву: квартира после ремонта" loading="lazy"><img src="img/rev-cv-4.webp" alt="Фото клиента к отзыву: квартира после ремонта" loading="lazy"></div>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Ю</span><span><b>Юлия Б.</b><small>3 июля 2026</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★ <span class="ph-chip">2 фото ↓</span></div>
+          <div class="ph-what">Керамогранит в деревянном доме</div>
+          <p>Очень качественно положили керамогранит, с учётом того что у нас очень криво косо залита была стяжка, мастеру похвала и уважение, сделали быстро, раньше срока, стоимость приемлемая, всё в уровень, швы идеальные, косяков я не нашла. Спасибо за качественно выполненную работу!!!!</p>
+          <div class="ph-photos"><img src="img/rev-ju-1.webp" alt="Фото клиента к отзыву: керамогранит под мрамор на полу в деревянном доме" loading="lazy"><img src="img/rev-ju-2.webp" alt="Фото клиента к отзыву: керамогранит под мрамор на полу в деревянном доме" loading="lazy"></div>
+          
         </div>
       </div></div>
       <div class="phone"><div class="screen">
@@ -689,32 +715,12 @@ footer a{color:#D3DED6}
         </div>
       </div></div>
       <div class="phone"><div class="screen">
-        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
-        <div class="ph-card">
-          <div class="ph-who"><span class="ph-ava">Ц</span><span><b>Цветкова</b><small>9 июля 2026</small></span></div>
-          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
-          <div class="ph-what">Ремонт квартиры</div>
-          <p>Обратились в компанию Наш ремонт для проведения ремонта в квартире. Меньше чем за полтора месяца работы были выполнены, чем мы очень довольны. Ребята молодцы, всегда на связи, проблем не было. Отдельная благодарность мастеру Вячеславу всё сделал аккуратно и на совесть! Всем рекомендую!</p>
-          
-        </div>
-      </div></div>
-      <div class="phone"><div class="screen">
         <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
         <div class="ph-card">
           <div class="ph-who"><span class="ph-ava">Е</span><span><b>Елена Шергина</b><small>12 августа 2025</small></span></div>
           <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
           <div class="ph-what">Ремонт квартиры</div>
           <p>Отличные мастера своего дела. Работают по договору. Сделали ремонт квартиры быстро и качественно, учитывая все пожелания. Соблюдают «режим тишины», убирают мусор. Цены на выполнение работ адекватные. Очень благодарна за прекрасно выполненную работу! Спасибо!!! Рекомендую!</p>
-          
-        </div>
-      </div></div>
-      <div class="phone"><div class="screen">
-        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
-        <div class="ph-card">
-          <div class="ph-who"><span class="ph-ava">Ю</span><span><b>Юлия Б.</b><small>3 июля 2026</small></span></div>
-          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
-          <div class="ph-what">Керамогранит в деревянном доме</div>
-          <p>Очень качественно положили керамогранит, с учётом того что у нас очень криво косо залита была стяжка, мастеру похвала и уважение, сделали быстро, раньше срока, стоимость приемлемая, всё в уровень, швы идеальные, косяков я не нашла. Спасибо за качественно выполненную работу!!!!</p>
           
         </div>
       </div></div>
@@ -800,6 +806,7 @@ footer a{color:#D3DED6}
   </div>
 </footer>
 
+<div class="lb" id="lb" role="dialog" aria-label="Фото к отзыву"><img alt=""></div>
 <script>
 (function(){
   // калькулятор: прайс и есть переключатель
@@ -815,6 +822,12 @@ footer a{color:#D3DED6}
   rng.addEventListener('input',function(){num.value=rng.value;calc()});
   document.querySelectorAll('input[name=kind]').forEach(function(r){r.addEventListener('change',calc)});
   calc();
+
+  // фото в отзывах: открыть крупно
+  var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  document.querySelectorAll('.ph-photos img').forEach(function(i){i.addEventListener('click',function(){lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('show')})});
+  lb.addEventListener('click',function(){lb.classList.remove('show')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('show')});
 
   // ванные: показать ещё
   var mb=document.getElementById('moreBaths');
