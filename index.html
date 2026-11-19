@@ -145,7 +145,7 @@ input[type=range]{width:100%;accent-color:var(--green);height:30px}
 .baths img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
 .baths .big{grid-column:span 2;grid-row:span 2}
 .baths .big.alt{grid-column:3/5}
-.baths .big{position:relative}
+.baths .big{position:relative;min-height:320px}
 .baths .big img{position:absolute;inset:0;aspect-ratio:auto}
 
 /* отзывы в телефонах */
@@ -183,7 +183,6 @@ input[type=range]{width:100%;accent-color:var(--green);height:30px}
 .faq details p{padding:0 56px 22px 0;color:var(--soft);max-width:40em}
 
 .gal-sub{font-size:36px}
-.rooms .big.alt{grid-column:auto}
 
 /* преимущества, плашки замера, галереи */
 .adv{background:var(--yellow);padding:56px 0}
@@ -308,6 +307,7 @@ footer a{color:#D3DED6}
   .works,.rev-grid{grid-template-columns:1fr 1fr}
   .team,.baths{grid-template-columns:1fr 1fr}
   .baths .big.alt{grid-column:span 2}
+  .baths .big{grid-row:span 1;aspect-ratio:4/5}
   .trust{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr;padding:0 0 0 30px}
   .steps::before{left:5px;right:auto;top:0;bottom:0;width:2px;height:auto}
@@ -477,19 +477,20 @@ footer a{color:#D3DED6}
     </div>
     <button type="button" class="btn btn-line more-btn" id="moreBaths">Показать ещё 16 ванных</button>
     <div class="gal-head">
-      <h3 class="gal-sub">Комнаты, коридоры, полы</h3>
-      <p>Выравнивание стен и потолков, штукатурка по маякам, покраска и обои, ламинат, плитка, натяжные потолки и подсветка.</p>
+      <h3 class="gal-sub">Комнаты, кухни, балконы, полы</h3>
+      <p>Выравнивание стен и потолков, штукатурка по маякам, покраска и обои, паркет ёлочкой, ламинат, плитка, фартук на кухне, натяжные потолки и подсветка.</p>
     </div>
     <div class="baths rooms">
-      <figure class="big"><img src="img/r-corridor.webp" alt="Длинный коридор со светлыми стенами и подсветкой потолка" loading="lazy"></figure>
+      <figure class="big"><img src="img/r3-room-herring.webp" alt="Светлая комната с паркетом ёлочкой и двумя окнами" loading="lazy"></figure>
+      <figure><img src="img/r-corridor.webp" alt="Длинный коридор со светлыми стенами и подсветкой потолка" loading="lazy"></figure>
+      <figure><img src="img/r3-balcony-herring.webp" alt="Балкон с полом ёлочкой и панорамным остеклением" loading="lazy"></figure>
       <figure><img src="img/r-room-light.webp" alt="Комната со световой линией по периметру потолка" loading="lazy"></figure>
       <figure><img src="img/r-room-bright.webp" alt="Светлая комната после выравнивания и покраски стен" loading="lazy"></figure>
+      <figure class="big alt"><img src="img/r3-kitchen.webp" alt="Кухня: белые фасады, столешница под дерево, фартук из плитки под мрамор" loading="lazy"></figure>
       <figure><img src="img/r-hall-tile.webp" alt="Коридор с крупной плиткой под дерево" loading="lazy"></figure>
       <figure><img src="img/r-laminate.webp" alt="Комната с ламинатом и ровными стенами" loading="lazy"></figure>
       <figure><img src="img/r2-room-window.webp" alt="Комната с тёмным ламинатом и ровными стенами" loading="lazy"></figure>
       <figure><img src="img/r2-room-led.webp" alt="Комната со светодиодной подсветкой потолка" loading="lazy"></figure>
-      <figure><img src="img/r2-floor-tile.webp" alt="Пол из плитки под дерево" loading="lazy"></figure>
-      <figure><img src="img/r2-wall-tile.webp" alt="Стена, облицованная крупной плиткой" loading="lazy"></figure>
     </div>
   </div>
 </section>
