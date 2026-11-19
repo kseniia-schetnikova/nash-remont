@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <link rel="icon" href="img/logo.png" type="image/png">
 <title>«Наш ремонт» — ремонт квартир под ключ в Архангельске</title>
 <meta name="description" content="Ремонт квартир под ключ и частично в Архангельске: новостройки, вторичка, санузлы. Бесплатный замер, договор с фиксированной ценой.">
@@ -12,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;700;800&family=Golos+Text:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
 <style>
 :root{
-  --wall:#F0F1EB;--putty:#E0E3D7;--ink:#1A1E12;--soft:#525947;--green:#4A5A22;--deep:#262D14;--laser:#3BF07A;--rule:#C6CAB9;
+  --wall:#FFFFFF;--putty:#F1E8D8;--ink:#161616;--soft:#5A5448;--green:#4A5A22;--deep:#161616;--olive:#2E3816;--yellow:#F5C22B;--laser:#3BF07A;--rule:#DCCFB8;
   --wrap:1240px;--gut:24px;
   --cond:'Fira Sans Extra Condensed','Arial Narrow',sans-serif;--sans:'Golos Text',system-ui,sans-serif;
 }
@@ -29,14 +28,14 @@ h3{font-size:28px;font-weight:700;line-height:1.05}
 .lead{font-size:19px;color:var(--soft);max-width:32em}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:6px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s}
-.btn-main{background:var(--green);color:#fff}
-.btn-main:hover{background:var(--deep)}
+.btn-main{background:var(--yellow);color:var(--ink)}
+.btn-main:hover{background:#E3AE12}
 .btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn-line:hover{background:var(--ink);color:var(--wall)}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px}
 
 /* шапка */
-header.top{position:sticky;top:0;z-index:20;background:rgba(240,241,235,.95);backdrop-filter:blur(8px)}
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:3px solid var(--yellow);backdrop-filter:blur(8px)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
 .logo{display:flex;align-items:center;gap:10px;font:800 28px/1 var(--cond);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
 .logo img{width:46px;height:46px}
@@ -46,25 +45,26 @@ nav.menu a{text-decoration:none;font-size:15px;color:var(--soft);white-space:now
 nav.menu a:hover{color:var(--ink)}
 .top-r{display:flex;align-items:center;gap:18px}
 .top-r .tel{font:700 22px/1 var(--cond);text-decoration:none;white-space:nowrap}
+.top-r .sm{display:none}
 .top-r .btn{min-height:44px;padding:0 20px;font-size:15px}
 
 /* первый экран */
 .hero{position:relative;background:var(--deep);color:#fff;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:min(calc(100vh - 70px),860px)}
 .hero-text{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut)));position:relative;z-index:2}
-.hero h1{font-size:104px;line-height:.88;letter-spacing:-.015em}
-.hero .sub{font:700 26px/1.1 var(--cond);color:#D7DEC0;margin-top:58px}
-.hero .lead{margin-top:16px;color:#C3C9B3}
+.hero h1{font-size:88px;line-height:.9;letter-spacing:-.015em;color:var(--yellow)}
+.hero .sub{font:700 28px/1.1 var(--cond);color:#fff;margin-top:58px}
+.hero .lead{margin-top:16px;color:#D2CCC0}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero .btn-main{background:#fff;color:var(--deep)}
-.hero .btn-main:hover{background:#E4E8D6}
+.hero .btn-main{background:var(--yellow);color:var(--ink)}
+.hero .btn-main:hover{background:#FFD447}
 .hero .btn-line{border-color:rgba(255,255,255,.6);color:#fff}
 .hero .btn-line:hover{background:#fff;color:var(--deep)}
-.hero .proof{margin-top:30px;font-size:15px;color:#C3C9B3;max-width:30em}
+.hero .proof{margin-top:30px;font-size:15px;color:#D2CCC0;max-width:30em}
 .hero .proof b{color:#fff;font-weight:600}
 .hero-photo{position:relative;min-height:520px}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.hero-photo .cap{position:absolute;left:16px;bottom:16px;background:rgba(26,30,18,.8);color:#fff;font-size:14px;padding:8px 12px;border-radius:4px;z-index:3}
+.hero-photo .cap{position:absolute;left:16px;bottom:16px;background:var(--yellow);color:var(--ink);font-weight:600;font-size:14px;padding:8px 12px;border-radius:4px;z-index:3}
 
 /* лазер: одна линия под заголовком, уходит в фото, где лазер настоящий */
 .laser-h{position:absolute;left:0;right:0;height:2px;background:var(--laser);box-shadow:0 0 6px var(--laser),0 0 18px rgba(59,240,122,.55);z-index:3;transform-origin:0 50%;top:var(--ly,300px);pointer-events:none}
@@ -102,12 +102,12 @@ section.sec{padding:110px 0}
 .solo{max-width:560px}
 .solo img{aspect-ratio:5/6}
 .quad{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.obj .tag{position:absolute;top:12px;left:12px;font:700 18px/1 var(--cond);padding:7px 10px;border-radius:4px;background:var(--wall)}
-.obj .tag.done{background:var(--green);color:#fff}
+.obj .tag{position:absolute;top:12px;left:12px;font:700 18px/1 var(--cond);padding:7px 10px;border-radius:4px;background:#fff}
+.obj .tag.done{background:var(--yellow);color:var(--ink)}
 
 /* цены + калькулятор */
-.price-sec{background:var(--green);color:#fff}
-.price-sec .lead{color:#C9D8CC}
+.price-sec{background:var(--deep);color:#fff}
+.price-sec .lead{color:#CFC8BA}
 .calc{display:grid;grid-template-columns:7fr 5fr;grid-template-areas:"kinds box" "extra box";gap:0 56px;align-items:start}
 .kinds{grid-area:kinds}.extra{grid-area:extra}.calc-box{grid-area:box}
 .kinds{border-top:1px solid rgba(255,255,255,.25)}
@@ -116,19 +116,19 @@ label.kind::before{content:"";position:absolute;left:0;top:18px;bottom:18px;widt
 label.kind input{position:absolute;opacity:0;pointer-events:none}
 label.kind b{font:800 40px/1 var(--cond)}
 label.kind .pr{font:700 30px/1 var(--cond);white-space:nowrap;text-align:right}
-label.kind .pr small{font:400 14px var(--sans);color:#C9D8CC;margin-left:4px}
-label.kind p{grid-column:1/-1;font-size:15px;color:#C9D8CC;max-width:34em}
+label.kind .pr small{font:400 14px var(--sans);color:#BDB6A8;margin-left:4px}
+label.kind p{grid-column:1/-1;font-size:15px;color:#BDB6A8;max-width:34em}
 label.kind:hover{background:rgba(255,255,255,.04)}
-label.kind:has(input:checked)::before{background:var(--laser);box-shadow:0 0 10px var(--laser)}
-label.kind:has(input:checked) b{color:var(--laser)}
-label.kind:has(input:focus-visible){outline:2px solid var(--laser);outline-offset:2px}
+label.kind:has(input:checked)::before{background:var(--yellow)}
+label.kind:has(input:checked) b{color:var(--yellow)}
+label.kind:has(input:focus-visible){outline:2px solid var(--yellow);outline-offset:2px}
 .extra{margin-top:44px}
 .extra h3{margin-bottom:10px}
 .extra ul{list-style:none;columns:2;column-gap:40px}
 .extra li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:15px;break-inside:avoid}
-.extra li span:last-child{white-space:nowrap;color:#C9D8CC}
-.note{margin-top:22px;font-size:15px;color:#C9D8CC;max-width:42em}
-.calc-box{position:sticky;top:96px;background:var(--wall);color:var(--ink);border-radius:8px;padding:30px}
+.extra li span:last-child{white-space:nowrap;color:var(--yellow)}
+.note{margin-top:22px;font-size:15px;color:#BDB6A8;max-width:42em}
+.calc-box{position:sticky;top:96px;background:#fff;color:var(--ink);border-radius:8px;padding:30px;border-top:6px solid var(--yellow)}
 .calc-box h3{font-size:30px}
 .area{margin-top:20px}
 .area-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px;font-size:15px;color:var(--soft)}
@@ -138,13 +138,77 @@ input[type=range]{width:100%;accent-color:var(--green);height:30px}
 .sum-wrap .k{font-size:14px;color:var(--soft)}
 .sum{font:800 64px/1 var(--cond);letter-spacing:-.01em;margin-top:6px}
 .sum-note{font-size:13px;color:var(--soft);margin-top:8px}
-form.lead-form{display:grid;gap:12px;margin-top:22px;padding-top:22px;border-top:1px solid var(--rule)}
-form.lead-form label.f{display:grid;gap:4px;font-size:14px;color:var(--soft)}
-form.lead-form input[type=text],form.lead-form input[type=tel]{height:50px;border-radius:6px;border:1.5px solid var(--rule);background:#fff;font:400 17px var(--sans);padding:0 14px;color:var(--ink)}
-.agree{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--soft);line-height:1.45}
-.agree input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--green)}
-.form-ok{display:none;background:#DDF7E5;border-left:4px solid var(--green);padding:12px 14px;border-radius:4px;font-size:15px}
-.form-ok.show{display:block}
+
+/* ванные */
+.baths{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px}
+.baths figure{overflow:hidden;border-radius:6px}
+.baths img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
+.baths .big{grid-column:span 2;grid-row:span 2}
+.baths .big.alt{grid-column:3/5}
+.baths .big{position:relative}
+.baths .big img{position:absolute;inset:0;aspect-ratio:auto}
+
+/* отзывы в телефонах */
+.rev-sec{background:var(--putty);overflow:hidden}
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.rev-nav{display:flex;gap:10px;margin-bottom:56px}
+.nav-btn{width:54px;height:54px;border-radius:50%;border:none;background:var(--yellow);color:var(--ink);font:700 22px/1 var(--sans);cursor:pointer}
+.nav-btn:hover{background:#E3AE12}
+.phones{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut))) 24px;scrollbar-width:none}
+.phones::-webkit-scrollbar{display:none}
+.phone{flex:0 0 300px;height:600px;scroll-snap-align:center;background:var(--ink);border-radius:44px;padding:12px;box-shadow:0 18px 40px rgba(22,22,22,.18);position:relative}
+.phone::before{content:"";position:absolute;top:22px;left:50%;width:84px;height:22px;margin-left:-42px;border-radius:12px;background:var(--ink);z-index:2}
+.screen{height:100%;border-radius:34px;background:#F4F4F2;overflow:hidden;display:flex;flex-direction:column}
+.ph-top{display:flex;justify-content:space-between;padding:52px 18px 12px;font-size:13px;color:#6B6B6B;background:#fff;border-bottom:1px solid #EAEAEA}
+.ph-top span:last-child{font-weight:600;color:var(--ink)}
+.ph-card{background:#fff;margin:12px;border-radius:16px;padding:14px;overflow:auto;flex:1;scrollbar-width:thin}
+.ph-who{display:flex;gap:10px;align-items:center}
+.ph-ava{width:38px;height:38px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:700;flex:none}
+.ph-who b{display:block;font-size:15px;line-height:1.2}
+.ph-who small{font-size:12px;color:#7A7A7A}
+.ph-stars{color:#F5A623;letter-spacing:2px;margin-top:10px;font-size:15px}
+.ph-what{font-size:12px;color:#7A7A7A;margin-top:2px}
+.ph-card p{font-size:14px;line-height:1.5;margin-top:10px}
+.ph-photos{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+.ph-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+
+/* вопросы */
+.faq-wrap{display:grid;grid-template-columns:4fr 8fr;gap:48px;align-items:start}
+.faq details{border-top:1.5px solid var(--ink)}
+.faq details:last-child{border-bottom:1.5px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font:700 24px/1.15 var(--cond)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:40px;height:40px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font:600 24px/1 var(--sans);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 56px 22px 0;color:var(--soft);max-width:40em}
+
+.gal-sub{font-size:36px}
+.rooms .big.alt{grid-column:auto}
+
+/* преимущества, плашки замера, галереи */
+.adv{background:var(--yellow);padding:56px 0}
+.adv h2{font-size:44px;margin-bottom:28px}
+.adv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+.adv-grid div{border-top:3px solid var(--ink);padding-top:16px}
+.adv-grid b{display:block;font:800 24px/1.05 var(--cond)}
+.adv-grid p{font-size:15px;margin-top:8px;color:#3A3428}
+.cta-band{background:var(--yellow);padding:40px 0}
+.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band b{display:block;font:800 34px/1.05 var(--cond)}
+.cta-band span{display:block;margin-top:6px;color:#3A3428}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#333}
+.gal-head{display:grid;grid-template-columns:4fr 8fr;gap:24px;align-items:baseline;margin:72px 0 24px;border-top:1.5px solid var(--ink);padding-top:20px}
+.gal-head:first-of-type{margin-top:0}
+.gal-head .gal-sub{margin:0}
+.gal-head p{color:var(--soft);max-width:40em}
+.baths .more{display:none}
+.baths.open .more{display:block}
+.more-btn{margin-top:20px}
+.call-box{display:grid;gap:10px;margin-top:22px;padding-top:22px;border-top:1px solid var(--rule)}
+.call-title{font:800 24px/1.1 var(--cond)}
+.anchor{position:relative;top:-110px;display:block;height:0}
 
 /* мастера */
 .team-sec{background:var(--putty)}
@@ -155,7 +219,7 @@ form.lead-form input[type=text],form.lead-form input[type=tel]{height:50px;borde
 .team .big img{aspect-ratio:auto}
 .team .wide{grid-column:span 2}
 .team .wide img{aspect-ratio:20/13;object-position:50% 35%}
-.team figcaption{position:absolute;left:10px;bottom:10px;background:rgba(26,30,18,.82);color:#fff;font-size:13px;padding:6px 10px;border-radius:4px}
+.team figcaption{position:absolute;left:10px;bottom:10px;background:rgba(22,22,22,.85);color:#fff;font-size:13px;padding:6px 10px;border-radius:4px}
 
 /* что делаем */
 .works{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 48px}
@@ -167,13 +231,14 @@ form.lead-form input[type=text],form.lead-form input[type=tel]{height:50px;borde
 .steps{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);gap:0;position:relative;padding-top:34px}
 .steps::before{content:"";position:absolute;left:0;right:0;top:10px;height:2px;background:var(--ink)}
 .steps li{position:relative;padding-right:18px}
-.steps li::before{content:"";position:absolute;top:-30px;left:0;width:12px;height:12px;border-radius:50%;background:var(--green);border:3px solid var(--putty)}
+.steps li::before{content:"";position:absolute;top:-30px;left:0;width:12px;height:12px;border-radius:50%;background:var(--yellow);border:3px solid var(--putty);box-shadow:0 0 0 1.5px var(--ink)}
 .steps .n{font:700 22px/1 var(--cond);color:var(--green)}
 .steps h3{font-size:25px;margin:8px 0}
 .steps p{font-size:15px;color:var(--soft);line-height:1.5}
 
 /* гарантии */
 .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.trust>div{border-top:4px solid var(--yellow);padding-top:18px}
 .trust b{display:block;font:800 34px/1 var(--cond);margin-bottom:12px}
 .trust p{font-size:16px;color:var(--soft)}
 
@@ -182,7 +247,7 @@ form.lead-form input[type=text],form.lead-form input[type=tel]{height:50px;borde
 .about-photo img{width:100%;max-width:440px;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
 .photo-slot{aspect-ratio:4/5;max-width:440px;width:100%;background:repeating-linear-gradient(-45deg,rgba(21,32,26,.04) 0 14px,transparent 14px 28px),var(--wall);border-radius:6px;display:grid;place-items:center;text-align:center;padding:24px}
 .about p{margin-top:18px;max-width:34em}
-.about .warn{margin-top:26px;padding-left:18px;border-left:4px solid var(--green);color:var(--soft)}
+.about .warn{margin-top:26px;padding-left:18px;border-left:4px solid var(--yellow);color:var(--soft)}
 
 /* отзывы */
 .rev-main{font:700 46px/1.08 var(--cond);max-width:24em;letter-spacing:-.005em}
@@ -192,25 +257,28 @@ form.lead-form input[type=text],form.lead-form input[type=tel]{height:50px;borde
 .rev blockquote{font-size:16px;line-height:1.55}
 .rev .who{margin-top:14px;font-size:14px;color:var(--soft)}
 .rev .who b{color:var(--ink);font-weight:600}
-.rev-count{margin-top:48px;font:700 28px/1.1 var(--cond);color:var(--green)}
+.rev-count{display:inline-block;margin-top:48px;font:700 28px/1.1 var(--cond);background:linear-gradient(transparent 55%,var(--yellow) 55%);padding:0 4px}
 
 /* контакты */
-.contact{background:var(--deep);color:#fff}
+.contact{background:var(--olive);color:#fff}
+.contact .big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
+.big-tel{color:var(--yellow)}
+.big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
 .big-tel{display:inline-block;font:800 120px/.9 var(--cond);text-decoration:none;letter-spacing:-.015em;margin-top:28px}
-.big-tel:hover{color:var(--laser)}
+.big-tel:hover{color:#fff}
 .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:56px}
 .c-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid rgba(255,255,255,.18);text-decoration:none}
-.c-row span:first-child{color:#B5C4B9;font-size:15px}
+.c-row span:first-child{color:#C9CDB4;font-size:15px}
 .c-row span:last-child{font:700 24px/1.1 var(--cond);text-align:right}
-a.c-row:hover span:last-child{color:var(--laser)}
+a.c-row:hover span:last-child{color:var(--yellow)}
 .msg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 .msg .btn{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.25);width:100%;gap:8px}
 .msg .btn:hover{background:rgba(255,255,255,.16)}
 .addr h3{font-size:34px}
-.addr p{color:#B5C4B9;margin-top:8px}
+.addr p{color:#C9CDB4;margin-top:8px}
 .addr .btn{margin-top:22px;border-color:#fff;color:#fff}
-.addr .btn:hover{background:#fff;color:var(--deep)}
-footer{background:var(--deep);color:#8FA095;border-top:1px solid rgba(255,255,255,.12);padding:26px 0 40px;font-size:14px}
+.addr .btn:hover{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+footer{background:#232A10;color:#A7AD92;border-top:1px solid rgba(255,255,255,.12);padding:26px 0 40px;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 32px}
 footer a{color:#D3DED6}
 .f-brand{display:flex;align-items:center;gap:14px}
@@ -223,24 +291,29 @@ footer a{color:#D3DED6}
 
 @media (max-width:1120px){
   nav.menu{display:none}
-  .hero h1{font-size:84px}
+  .hero h1{font-size:68px}
 }
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr;min-height:0}
   .hero-text{padding:48px var(--gut) 40px}
   .hero-photo{min-height:0;aspect-ratio:4/5}
-  .about,.c-grid{grid-template-columns:1fr}
+  .about,.c-grid,.faq-wrap{grid-template-columns:1fr}
+  .adv-grid{grid-template-columns:repeat(3,1fr)}
+  .faq-wrap{gap:0}
   .calc{grid-template-columns:1fr;grid-template-areas:"kinds" "box" "extra";gap:32px 0}
   .extra{margin-top:12px}
   .calc-box{position:static}
   .works,.rev-grid{grid-template-columns:1fr 1fr}
   .team{grid-template-columns:repeat(3,1fr)}
+  .baths{grid-template-columns:repeat(3,1fr)}
+  .baths .big.alt{grid-column:span 2}
   .trust{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr;padding:0 0 0 30px}
   .steps::before{left:5px;right:auto;top:0;bottom:0;width:2px;height:auto}
   .steps li{padding:0 0 26px}
   .steps li::before{top:4px;left:-31px}
-  .big-tel{font-size:84px}
+  .big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
+.big-tel{font-size:84px}
 }
 @media (max-width:600px){
   :root{--gut:16px}
@@ -251,7 +324,9 @@ footer a{color:#D3DED6}
   header.top .wrap{height:62px}
   .logo{font-size:26px}
   .top-r .tel{display:none}
-  .hero h1{font-size:60px}
+  .top-r .lg{display:none}
+  .top-r .sm{display:inline}
+  .hero h1{font-size:50px}
   .hero .sub{font-size:22px;margin-top:40px}
   .hero .cta .btn{flex:1 1 100%}
   section.sec{padding:72px 0}
@@ -281,12 +356,25 @@ footer a{color:#D3DED6}
   .calc-box{padding:20px}
   .sum{font-size:52px}
   .works,.rev-grid,.trust{grid-template-columns:1fr}
-  .team{grid-template-columns:1fr 1fr;gap:8px}
+  .team,.baths{grid-template-columns:1fr 1fr;gap:8px}
+  .gal-sub{font-size:28px}
+  .gal-head{grid-template-columns:1fr;gap:8px;margin:48px 0 16px}
+  .adv-grid{grid-template-columns:1fr 1fr}
+  .adv h2{font-size:34px}
+  .cta-band b{font-size:28px}
+  .cta-btns,.cta-btns .btn{width:100%}
+  .baths .big{grid-row:span 1;aspect-ratio:4/5}
+  .baths .big.alt{grid-column:span 2}
   .team figcaption{font-size:12px;left:6px;bottom:6px;padding:4px 7px}
   .trust{gap:28px}
   .rev-main{font-size:32px}
+  .rev-nav{display:none}
+  .phone{flex-basis:280px;height:560px}
+  .faq summary{font-size:20px;padding:18px 0}
+  .faq details p{padding-right:0}
   .rev-grid{gap:32px;margin-top:44px}
-  .big-tel{font-size:54px}
+  .big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
+.big-tel{font-size:54px}
   .msg{grid-template-columns:1fr}
   .c-row span:last-child{font-size:21px}
   .addr h3{font-size:28px}
@@ -304,11 +392,12 @@ footer a{color:#D3DED6}
       <a href="#prices">Цены и расчёт</a>
       <a href="#steps">Как работаем</a>
       <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <div class="top-r">
-      <a class="tel" href="tel:+79052934064">+7 905 293-40-64</a>
-      <a class="btn btn-main" href="#prices">Рассчитать</a>
+      <a class="tel" href="tel:+78182476706">47-67-06</a>
+      <a class="btn btn-main" href="tel:+78182476706"><span class="lg">Бесплатный замер</span><span class="sm">Позвонить</span></a>
     </div>
   </div>
 </header>
@@ -318,14 +407,14 @@ footer a{color:#D3DED6}
   <span class="laser-h" aria-hidden="true"></span>
   <div class="hero-grid">
     <div class="hero-text">
-      <h1 id="h1">От бетона до новоселья</h1>
-      <p class="sub">Ремонт квартир под ключ в Архангельске</p>
+      <h1 id="h1">Ремонт квартир под&nbsp;ключ в&nbsp;Архангельске</h1>
+      <p class="sub">От планировки до финишной отделки</p>
       <p class="lead">Новостройки и вторичка, капитальный и косметический ремонт, санузлы. Бесплатно приедем на замер, посчитаем, куда пойдёт каждый рубль, и закрепим цену в договоре.</p>
       <div class="cta">
-        <a class="btn btn-main" href="#prices">Рассчитать ремонт</a>
-        <a class="btn btn-line" href="tel:+79052934064">Позвонить</a>
+        <a class="btn btn-main" href="tel:+78182476706">Бесплатный замер: 47-67-06</a>
+        <a class="btn btn-line" href="#prices">Рассчитать ремонт</a>
       </div>
-      <p class="proof"><b>Больше 10 лет</b> и <b>больше 260 объектов</b>. 95% клиентов советуют нас знакомым или обращаются повторно. На Авито 19 отзывов, все на пять звёзд.</p>
+      <p class="proof"><b>Мастера со стажем более 10 лет</b> и <b>больше 260 объектов</b>. 95% клиентов советуют нас знакомым или обращаются повторно.</p>
     </div>
     <div class="hero-photo" id="heroPhoto">
       <img src="img/hero-laser.webp" alt="Мастерица выставляет маяки на стене по зелёным лучам лазерного уровня" width="1050" height="1400" fetchpriority="high">
@@ -334,70 +423,80 @@ footer a{color:#D3DED6}
   </div>
 </section>
 
+<section class="adv" id="trust">
+  <div class="wrap">
+    <h2>Наши преимущества</h2>
+    <div class="adv-grid">
+      <div><b>Бесплатный выезд мастера на замер</b><p>Приедем в удобное время и посчитаем ремонт.</p></div>
+      <div><b>Мастера со стажем более 10 лет</b><p>Больше 260 объектов в Архангельске.</p></div>
+      <div><b>Помощь с материалами</b><p>Поможем купить и доставить, скидка до 30%.</p></div>
+      <div><b>Гарантия качества</b><p>Отвечаем за работу и после сдачи.</p></div>
+      <div><b>Оформление договора</b><p>Цена фиксируется в договоре и не меняется.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="object">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Наши объекты</h2>
-      <p class="lead">Только живые фото с наших ремонтов, никаких картинок из интернета.</p>
+      <h2>Наши работы</h2>
+      <p class="lead">Профессиональный ремонт квартир под ключ — от планировки до финишной отделки. Все фото с наших объектов.</p>
     </div>
-    <div class="obj">
-      <div class="obj-text">
-        <h3>Санузел с нишами и подсветкой</h3>
-        <p>Плитка под бетон, ниши под дерево со светодиодной подсветкой, подсвеченный экран ванны. <span class="slot">{{район, площадь, срок}}</span></p>
-      </div>
-      <div class="pair">
-        <figure><img src="img/niche-process.webp" alt="Ниши в стене санузла в процессе отделки, на полке инструменты" loading="lazy" width="601" height="800"><span class="tag">В работе</span></figure>
-        <figure><img src="img/niche-done.webp" alt="Готовый санузел: тёмная плитка под бетон, три подсвеченные ниши, ванна" loading="lazy" width="601" height="800"><span class="tag done">Готово</span></figure>
-      </div>
+    <div class="gal-head">
+      <h3 class="gal-sub">Ремонт ванных комнат и санузлов</h3>
+      <p>С гидроизоляцией и облицовкой кафельной плиткой и керамогранитом. Душевые с трапом и стеклом, ниши с подсветкой, зеркала с подсветкой, подвесная сантехника.</p>
     </div>
+    <div class="baths" id="bathGal">
+      <figure class="big"><img src="img/bath-green.webp" alt="Санузел с зелёной плиткой ёлочкой в душевой и плиткой с узором на полу" loading="lazy"></figure>
+      <figure><img src="img/b-oval.webp" alt="Раковина и овальное зеркало с подсветкой, душевая с плиткой терраццо" loading="lazy"></figure>
+      <figure><img src="img/bath-shower.webp" alt="Душевая со стеклом, нишами с подсветкой и зеркалом необычной формы" loading="lazy"></figure>
+      <figure><img src="img/b-drop.webp" alt="Санузел с зеркалом-каплей с подсветкой" loading="lazy"></figure>
+      <figure><img src="img/bath-graphite.webp" alt="Ванная с плиткой под бетон и овальным зеркалом с подсветкой" loading="lazy"></figure>
+      <figure class="big alt"><img src="img/b-terrazzo.webp" alt="Душевая с плиткой терраццо и круглым зеркалом с подсветкой" loading="lazy"></figure>
+      <figure><img src="img/b-herring.webp" alt="Душевая со стеклом и плиткой ёлочкой" loading="lazy"></figure>
+      <figure><img src="img/b-tub-green.webp" alt="Ванна с зелёной вертикальной плиткой и чёрным душем" loading="lazy"></figure>
+      <figure><img src="img/bath-wood.webp" alt="Ванная с акцентной стеной под дерево" loading="lazy"></figure>
+      <figure><img src="img/b-wood-niche.webp" alt="Ниша с деревянной отделкой и подсветкой" loading="lazy"></figure>
+      <figure class="more"><img src="img/b-terrazzo-wc.webp" alt="Санузел с плиткой терраццо и подвесным унитазом" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-drop-shower.webp" alt="Душевая и зеркало-капля с подсветкой" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-shelf.webp" alt="Душевая с плиткой ёлочкой и деревянной полкой" loading="lazy"></figure>
+      <figure class="more"><img src="img/b-wood-stripe.webp" alt="Санузел с полосой под дерево и душем на трапе" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-glass-white.webp" alt="Душевая со стеклом в белой ванной" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-terrazzo-top.webp" alt="Душевая с плиткой терраццо, вид сверху" loading="lazy"></figure>
+      <figure class="more"><img src="img/bath-marble-1.webp" alt="Ванная под мрамор с зеркалом с подсветкой" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-black.webp" alt="Санузел с чёрным подвесным унитазом и ванной" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-cabinet-tub.webp" alt="Ванна с зеркальным шкафом и плиткой с узором" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-glass-corner.webp" alt="Угловая душевая со стеклом и трапом" loading="lazy"></figure>
+      <figure class="more"><img src="img/bath-niches.webp" alt="Ванная с плиткой под бетон и подсвеченными нишами" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-wood-shower.webp" alt="Душ с плиткой под дерево и тумбой" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-sage-wc.webp" alt="Санузел с зелёной вертикальной плиткой и подвесным унитазом" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-drop-wc.webp" alt="Санузел с зеркалом-каплей и подвесным унитазом" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-marble-wood.webp" alt="Ванная под мрамор с полом под дерево" loading="lazy"></figure>
+      <figure class="more"><img src="img/b2-terrazzo-base.webp" alt="Поддон душевой с плиткой терраццо и плинтусом под дерево" loading="lazy"></figure>
+    </div>
+    <button type="button" class="btn btn-line more-btn" id="moreBaths">Показать ещё 16 ванных</button>
+    <div class="gal-head">
+      <h3 class="gal-sub">Комнаты, коридоры, полы</h3>
+      <p>Выравнивание стен и потолков, штукатурка по маякам, покраска и обои, ламинат, плитка, натяжные потолки и подсветка.</p>
+    </div>
+    <div class="baths rooms">
+      <figure class="big"><img src="img/r-corridor.webp" alt="Длинный коридор со светлыми стенами и подсветкой потолка" loading="lazy"></figure>
+      <figure><img src="img/r-room-light.webp" alt="Комната со световой линией по периметру потолка" loading="lazy"></figure>
+      <figure><img src="img/r-room-bright.webp" alt="Светлая комната после выравнивания и покраски стен" loading="lazy"></figure>
+      <figure><img src="img/r-hall-tile.webp" alt="Коридор с крупной плиткой под дерево" loading="lazy"></figure>
+      <figure><img src="img/r-laminate.webp" alt="Комната с ламинатом и ровными стенами" loading="lazy"></figure>
+      <figure><img src="img/r2-room-window.webp" alt="Комната с тёмным ламинатом и ровными стенами" loading="lazy"></figure>
+      <figure><img src="img/r2-room-led.webp" alt="Комната со светодиодной подсветкой потолка" loading="lazy"></figure>
+      <figure><img src="img/r2-floor-tile.webp" alt="Пол из плитки под дерево" loading="lazy"></figure>
+      <figure><img src="img/r2-wall-tile.webp" alt="Стена, облицованная крупной плиткой" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
 
-    <div class="obj">
-      <div class="obj-text">
-        <h3>Балкон в новостройке</h3>
-        <p>Был голый бетон. Утеплили пол, настелили фанеру, уложили покрытие под дерево и плинтус. <span class="slot">{{ЖК, площадь, срок}}</span></p>
-      </div>
-      <div class="quad">
-        <figure><img src="img/balcony-before.webp" alt="Балкон до ремонта: бетонный пол, панорамное остекление" loading="lazy" width="444" height="960"><span class="tag">Было</span></figure>
-        <figure><img src="img/balcony-process.webp" alt="Балкон в работе: утеплитель и листы фанеры на полу" loading="lazy" width="768" height="1024"><span class="tag">В работе</span></figure>
-        <figure><img src="img/balcony-after-1.webp" alt="Готовый балкон: серое покрытие под дерево, плинтус" loading="lazy" width="768" height="1024"><span class="tag done">Стало</span></figure>
-        <figure><img src="img/balcony-after-2.webp" alt="Готовый балкон с другого ракурса, вид на двор" loading="lazy" width="768" height="1024"></figure>
-      </div>
-    </div>
-
-    <div class="obj">
-      <div class="obj-text">
-        <h3>Комната: стены и пол</h3>
-        <p>Выравнивание стен и поклейка обоев. <span class="slot">{{пол тоже ваш? район, площадь, срок}}</span></p>
-      </div>
-      <div class="trio">
-        <figure><img src="img/room-1.webp" alt="Светлая комната после ремонта: обои, светлый ламинат, окно" loading="lazy" width="600" height="800"></figure>
-        <figure><img src="img/room-2.webp" alt="Стена с фактурными обоями и бра, светлый ламинат" loading="lazy" width="600" height="800"></figure>
-        <figure><img src="img/room-3.webp" alt="Ровная стена с обоями и розеткой, ламинат" loading="lazy" width="600" height="800"></figure>
-      </div>
-    </div>
-
-    <div class="obj">
-      <div class="obj-text">
-        <h3>Детская с фотообоями</h3>
-        <p>Фотообои на всю стену: подготовка, подгонка стыков, аккуратная поклейка. <span class="slot">{{район, что ещё делали}}</span></p>
-      </div>
-      <div class="solo">
-        <figure><img src="img/kids-wallpaper.webp" alt="Детская: фотообои с джунглями, львом, зеброй и слоном, зелёная стена с окном" loading="lazy" width="720" height="864"></figure>
-      </div>
-    </div>
-
-    <div class="obj">
-      <div class="obj-text">
-        <h3>Новостройка: с чего всё начинается</h3>
-        <p>Перегородки из газоблока, разводка электрики, щиток, трубы. Эту часть потом не видно, но от неё зависит, сколько прослужит ремонт.</p>
-      </div>
-      <div class="quad">
-        <figure><img src="img/build-1.webp" alt="Новые перегородки из газоблока в санузле" loading="lazy" width="600" height="800"></figure>
-        <figure><img src="img/build-2.webp" alt="Дверные проёмы в перегородках, подрозетники" loading="lazy" width="600" height="800"></figure>
-        <figure><img src="img/build-3.webp" alt="Электрощиток и разводка проводов у входной двери" loading="lazy" width="600" height="800"></figure>
-        <figure><img src="img/build-4.webp" alt="Стены после штукатурки, трубы водоснабжения и канализации" loading="lazy" width="600" height="800"></figure>
-      </div>
-    </div>
+<section class="cta-band">
+  <div class="wrap">
+    <p><b>Бесплатный выезд мастера на замер</b><span>Приедем, посмотрим объект и посчитаем, куда пойдёт каждый рубль.</span></p>
+    <div class="cta-btns"><a class="btn btn-dark" href="tel:+78182476706">Позвонить: 47-67-06</a><a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
   </div>
 </section>
 
@@ -405,15 +504,14 @@ footer a{color:#D3DED6}
   <div class="wrap">
     <div class="sec-head">
       <h2>Сколько стоит ремонт</h2>
-      <p class="lead">Выберите вид ремонта и площадь, сразу увидите ориентир. Цена за м² <span class="slot">{{с материалами или без?}}</span>. Точную смету считаем после бесплатного замера и фиксируем в договоре.</p>
+      <p class="lead">Выберите вид ремонта и площадь, сразу увидите ориентир. Ничего вводить не нужно. Точную смету считаем после бесплатного замера и фиксируем в договоре.</p>
     </div>
     <div class="calc">
         <div class="kinds" role="radiogroup" aria-label="Вид ремонта">
           <label class="kind"><input type="radio" name="kind" value="5000" data-name="Косметический"><b>Косметический</b><span class="pr">от 5 000 ₽<small>/м²</small></span><p>Недорого освежить квартиру: стены, потолки, полы без переноса коммуникаций.</p></label>
           <label class="kind"><input type="radio" name="kind" value="8000" data-name="В новостройке" checked><b>В новостройке</b><span class="pr">от 8 000 ₽<small>/м²</small></span><p>Все этапы: от зачистки стяжки и черновых коммуникаций до чистовой отделки.</p></label>
-          <label class="kind"><input type="radio" name="kind" value="9000" data-name="Дизайнерский"><b>Дизайнерский</b><span class="pr">от 9 000 ₽<small>/м²</small></span><p>Ремонт с дизайнерскими решениями. <span class="slot">{{что входит}}</span></p></label>
+          <label class="kind"><input type="radio" name="kind" value="9000" data-name="Дизайнерский"><b>Дизайнерский</b><span class="pr">от 9 000 ₽<small>/м²</small></span><p>Ремонт с дизайнерскими решениями под ваш стиль.</p></label>
           <label class="kind"><input type="radio" name="kind" value="10000" data-name="Капитальный"><b>Капитальный</b><span class="pr">от 10 000 ₽<small>/м²</small></span><p>Полностью обновляем жильё: демонтаж, электрика, сантехника, выравнивание, отделка.</p></label>
-          <label class="kind"><input type="radio" name="kind" value="15000" data-name="Премиальный"><b>Премиальный</b><span class="pr">от 15 000 ₽<small>/м²</small></span><p>Ремонт высокого уровня, где важна каждая деталь.</p></label>
           <label class="kind"><input type="radio" name="kind" value="3000" data-name="Перепланировка"><b>Перепланировка</b><span class="pr">от 3 000 ₽<small>/м²</small></span><p>Объединить кухню с гостиной, расширить санузел, сделать гардеробную. Поможем согласовать.</p></label>
         </div>
         <div class="extra">
@@ -451,13 +549,11 @@ footer a{color:#D3DED6}
           <div class="sum" id="sum">от 400 000 ₽</div>
           <p class="sum-note">Это ориентир. Точную смету посчитаем после замера, он бесплатный.</p>
         </div>
-        <form class="lead-form" id="leadForm" novalidate>
-          <label class="f">Как к вам обращаться<input type="text" name="name" autocomplete="name" required></label>
-          <label class="f">Телефон<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7" required></label>
-          <label class="agree"><input type="checkbox" name="agree" required><span>Согласен(на) на обработку персональных данных по <a href="politika.html" target="_blank">политике конфиденциальности</a></span></label>
-          <button class="btn btn-main" type="submit">Записаться на бесплатный замер</button>
-          <div class="form-ok" id="formOk" role="status"></div>
-        </form>
+        <div class="call-box"><span id="calc-form" class="anchor"></span>
+          <p class="call-title">Бесплатный выезд мастера на замер</p>
+          <a class="btn btn-main" href="tel:+78182476706">Позвонить: 47-67-06</a>
+          <a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a>
+        </div>
       </div>
     </div>
   </div>
@@ -467,41 +563,48 @@ footer a{color:#D3DED6}
   <div class="wrap">
     <div class="sec-head">
       <h2>Мастера за работой</h2>
-      <p class="lead">Стены выводим по лазерному уровню, шпатлюем по армирующей сетке, плитку режем на месте.</p>
+      <p class="lead">Больше 10 лет и больше 260 объектов в Архангельске. В команде мастера и мастерицы, у каждого своё дело: штукатурка и шпатлёвка, плитка, полы, электрика и сантехника. Стены выводим по лазерному уровню, плитку режем на месте.</p>
     </div>
     <div class="team">
-      <figure class="big"><img src="img/team-laser-wall.webp" alt="Стена из газоблока с маяками, по ней проходят лучи лазерного уровня, мастерица штукатурит" loading="lazy" width="800" height="1000"><figcaption>Маяки по лазеру</figcaption></figure>
-      <figure><img src="img/team-beacon.webp" alt="Мастерица ставит маяк на стену по лазерной линии" loading="lazy" width="800" height="1000"><figcaption>Ставим маяки</figcaption></figure>
-      <figure><img src="img/team-plaster-1.webp" alt="Мастерица штукатурит бетонную стену" loading="lazy" width="750" height="1000"><figcaption>Штукатурка</figcaption></figure>
-      <figure><img src="img/team-plaster-2.webp" alt="Мастерица выравнивает штукатурку правилом" loading="lazy" width="751" height="1000"><figcaption>Выравнивание правилом</figcaption></figure>
-      <figure><img src="img/team-mesh-2.webp" alt="Мастерица шпатлюет стену по армирующей сетке" loading="lazy" width="750" height="1000"><figcaption>Армирующая сетка</figcaption></figure>
-      <figure><img src="img/team-mesh-1.webp" alt="Мастерица шпатлюет стену двумя шпателями" loading="lazy" width="750" height="1000"><figcaption>Шпатлёвка</figcaption></figure>
-      <figure><img src="img/team-plaster-corner.webp" alt="Мастерица выводит угол стены шпателем" loading="lazy" width="750" height="1000"><figcaption>Ровные углы</figcaption></figure>
-      <figure><img src="img/team-primer-room.webp" alt="Мастерица грунтует стену валиком в пустой комнате" loading="lazy" width="752" height="1000"><figcaption>Грунтовка</figcaption></figure>
-      <figure><img src="img/team-finish-1.webp" alt="Мастерица выравнивает финишную шпатлёвку широким шпателем" loading="lazy" width="750" height="1000"><figcaption>Финишная шпатлёвка</figcaption></figure>
-      <figure><img src="img/team-finish-2.webp" alt="Мастерица шпатлюет стену у пола" loading="lazy" width="750" height="1000"><figcaption>До самого пола</figcaption></figure>
-      <figure><img src="img/team-paint-1.webp" alt="Мастерица красит стену валиком у окна" loading="lazy" width="750" height="1000"><figcaption>Покраска стен</figcaption></figure>
-      <figure><img src="img/team-paint-2.webp" alt="Мастерица прокрашивает угол под потолком маленьким валиком" loading="lazy" width="750" height="1000"><figcaption>Углы под потолком</figcaption></figure>
-      <figure><img src="img/team-floor-laser.webp" alt="Мастер укладывает плитку на пол по лучу лазерного уровня" loading="lazy" width="750" height="1000"><figcaption>Плитка на пол по лазеру</figcaption></figure>
-      <figure class="wide"><img src="img/team-tile-cut.webp" alt="Мастер режет крупноформатную плитку болгаркой" loading="lazy" width="750" height="1000"><figcaption>Рез плитки</figcaption></figure>
-      <figure class="wide"><img src="img/team-slab-cut.webp" alt="Мастер в респираторе режет плиту керамогранита под мрамор" loading="lazy" width="750" height="1000"><figcaption>Керамогранит</figcaption></figure>
+      <figure class="big"><img src="img/t-uniform.webp" alt="Мастер в форме «Наш ремонт» выставляет крупную плитку на системе выравнивания" loading="lazy"><figcaption>Крупная плитка</figcaption></figure>
+      <figure><img src="img/t-floor-tile.webp" alt="Мастер укладывает плитку на пол с системой выравнивания" loading="lazy"><figcaption>Плитка на пол</figcaption></figure>
+      <figure><img src="img/t-marble.webp" alt="Мастер монтирует керамогранит под чёрный мрамор" loading="lazy"><figcaption>Керамогранит</figcaption></figure>
+      <figure><img src="img/t-measure.webp" alt="Мастер замеряет стену рулеткой перед укладкой" loading="lazy"><figcaption>Всё по замерам</figcaption></figure>
+      <figure><img src="img/team-beacon.webp" alt="Мастерица ставит маяк на стену по лазерной линии" loading="lazy"><figcaption>Маяки по лазеру</figcaption></figure>
+      <figure class="wide"><img src="img/t-waterproof.webp" alt="Мастер проклеивает гидроизоляционную ленту в душевой" loading="lazy"><figcaption>Гидроизоляция</figcaption></figure>
+      <figure><img src="img/t-tilecutter.webp" alt="Мастер режет плитку на плиткорезе" loading="lazy"><figcaption>Рез плитки</figcaption></figure>
+      <figure><img src="img/team-plaster-2.webp" alt="Мастерица выравнивает штукатурку правилом" loading="lazy"><figcaption>Штукатурка</figcaption></figure>
+      <figure><img src="img/t-sanding.webp" alt="Мастерица шлифует стену машинкой" loading="lazy"><figcaption>Шлифовка</figcaption></figure>
+      <figure><img src="img/team-mesh-2.webp" alt="Мастерица шпатлюет стену по армирующей сетке" loading="lazy"><figcaption>Армирующая сетка</figcaption></figure>
+      <figure><img src="img/t-wallpaper.webp" alt="Мастерица разглаживает обои" loading="lazy"><figcaption>Обои</figcaption></figure>
+      <figure><img src="img/t-laminate.webp" alt="Мастер режет ламинат лобзиком" loading="lazy"><figcaption>Ламинат</figcaption></figure>
+      <figure><img src="img/team-floor-laser.webp" alt="Мастер укладывает плитку на пол по лучу лазерного уровня" loading="lazy"><figcaption>Пол по лазеру</figcaption></figure>
+      <figure><img src="img/team-laser-wall.webp" alt="Стена с маяками и лучами лазерного уровня" loading="lazy"><figcaption>Ровные стены</figcaption></figure>
+      <figure class="wide"><img src="img/t-slab-table.webp" alt="Мастер режет плиту керамогранита на столе" loading="lazy"><figcaption>Большие форматы</figcaption></figure>
     </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p><b>Мастера со стажем более 10 лет приедут на замер бесплатно</b><span>Позвоните или напишите ВКонтакте — договоримся об удобном времени.</span></p>
+    <div class="cta-btns"><a class="btn btn-dark" href="tel:+78182476706">Позвонить: 47-67-06</a><a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
   </div>
 </section>
 
 <section class="sec" id="works">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Все работы одной командой</h2>
-      <p class="lead">От демонтажа до дверей и натяжных потолков. Берём квартиры под ключ и отдельные работы.</p>
+      <h2>Что мы делаем</h2>
+      <p class="lead">Доверьте ремонт профессионалам с 10-летним опытом! Мы возьмём на себя все этапы — от демонтажа до установки дверей и натяжных потолков.</p>
     </div>
     <div class="works">
-      <div class="work"><h3>Ванные и санузлы</h3><p>Гидроизоляция пола и стен, плитка и керамогранит, тёплый пол.</p></div>
-      <div class="work"><h3>Стены и потолки</h3><p>Штукатурка по маякам, шпатлёвка, покраска, обои, декоративная штукатурка, фрески, молдинги.</p></div>
-      <div class="work"><h3>Полы</h3><p>Демонтаж, звукоизоляция, стяжка и сухая стяжка, фанера, ламинат, линолеум, кварц-винил.</p></div>
-      <div class="work"><h3>Электрика и сантехника</h3><p>Свои электрик и сантехник, монтаж систем отопления.</p></div>
-      <div class="work"><h3>Перепланировка</h3><p>Демонтаж и монтаж перегородок, помощь с согласованием.</p></div>
-      <div class="work"><h3>Двери и потолки</h3><p>Установка дверей, натяжные потолки, чистовая отделка.</p></div>
+      <div class="work"><h3>Ремонт ванных комнат</h3><p>С гидроизоляцией и облицовкой кафельной плиткой. Душевые, ниши, подсветка, подвесная сантехника.</p></div>
+      <div class="work"><h3>Малярные работы любой сложности</h3><p>Выравнивание стен и потолков, штукатурка по маякам, шпатлёвка, покраска, оклейка обоев, декоративная штукатурка, установка фресок и молдингов.</p></div>
+      <div class="work"><h3>Ремонт полов</h3><p>Демонтаж старого покрытия, звукоизоляция, сухая стяжка, настил фанеры, ламината, линолеума или кварц-винила.</p></div>
+      <div class="work"><h3>Инженерные коммуникации</h3><p>Услуги электрика и сантехника.</p></div>
+      <div class="work"><h3>Перепланировка</h3><p>Демонтаж и монтаж перегородок, согласование изменений.</p></div>
+      <div class="work"><h3>Финишная отделка</h3><p>Установка дверей, монтаж натяжных потолков.</p></div>
     </div>
   </div>
 </section>
@@ -513,111 +616,165 @@ footer a{color:#D3DED6}
       <p class="lead">Сначала приезжаем и слушаем пожелания. Начинаем, только если вас всё устраивает.</p>
     </div>
     <ol class="steps">
-      <li><span class="n">1</span><h3>Заявка</h3><p>Звонок, сообщение в ВК или форма на сайте.</p></li>
-      <li><span class="n">2</span><h3>Замер</h3><p>Бесплатно. Мастер приезжает и смотрит объект.</p></li>
+      <li><span class="n">1</span><h3>Звонок</h3><p>Позвоните на 47-67-06 или напишите ВКонтакте.</p></li>
+      <li><span class="n">2</span><h3>Бесплатный замер</h3><p>Мастер приезжает и смотрит объект.</p></li>
       <li><span class="n">3</span><h3>Смета</h3><p>Считаем, куда будет потрачен каждый рубль.</p></li>
       <li><span class="n">4</span><h3>Договор</h3><p>Объём, сроки и цена. По итогу цена не меняется.</p></li>
       <li><span class="n">5</span><h3>Материалы</h3><p>Поможем купить и привезти, у партнёров скидка до 30%.</p></li>
-      <li><span class="n">6</span><h3>Работы</h3><p>По смете, всегда на связи. <span class="slot">{{как показываете ход работ?}}</span></p></li>
+      <li><span class="n">6</span><h3>Работы</h3><p>Работаем по смете и всегда на связи.</p></li>
       <li><span class="n">7</span><h3>Сдача</h3><p>Принимаете работу и получаете гарантию.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="sec" id="trust">
+<section class="sec rev-sec" id="reviews">
   <div class="wrap">
+    <div class="rev-head">
+      <div class="sec-head">
+        <h2>Отзывы клиентов</h2>
+        <p class="lead">Настоящие отзывы с Авито и Яндекс Карт. Листайте.</p>
+      </div>
+      <div class="rev-nav"><button type="button" class="nav-btn" id="revPrev" aria-label="Предыдущий отзыв">←</button><button type="button" class="nav-btn" id="revNext" aria-label="Следующий отзыв">→</button></div>
+    </div>
+  </div>
+  <div class="phones" id="phones">
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">П</span><span><b>Пользователь</b><small>11 марта 2026</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Поклейка обоев, штукатурно-малярные работы</div>
+          <p>Ксения, огромное спасибо за качественно выполненную поклейку обоев, мастер от бога, спасибо за уроки, сама никогда так не отшпаклюю и не поклею. Дай вам бог здоровья и не проблемных заказчиков. Спасибо!!!)))</p>
+          <div class="ph-photos"><img src="img/rev-room-1.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"><img src="img/rev-room-2.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"><img src="img/rev-room-3.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"><img src="img/rev-room-4.webp" alt="Фото клиента к отзыву: комната после поклейки обоев" loading="lazy" width="300" height="400"></div>
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">С</span><span><b>Светлана</b><small>25 февраля 2025</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Ремонт 1-комнатной квартиры</div>
+          <p>Отличная работа Ксении и её мастеров! За две недели выполнили полный ремонт 1-к квартиры — электрика, полы (ламинат и линолеум), потолки (натяжные), стены (обои), и все работы по демонтажу (без санузла). Работы по договору, по заранее обговоренной смете и в срок. Без форс-мажоров, неявок, отговорок. Весь мусор сразу убирали и соблюдали время работы, так как дом жилой. Ксения всегда на связи и помогла с выбором материалов.</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Н</span><span><b>Николай Николаевич</b><small>3 июля 2026</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Ремонт квартиры</div>
+          <p>Хочу поблагодарить Наш ремонт и команду за качественный ремонт квартиры, вся семья осталась довольна. Ремонт сделали согласно договору и смете, не было непредсказуемых трат, что очень важно. Желаю процветания и успехов. Огромное спасибо за ремонт!</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">П</span><span><b>Пользователь</b><small>16 мая 2025</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Ремонт ванной под ключ</div>
+          <p>Ремонт ванной выполнен на высоте и за короткий срок, что для меня было очень важно! Хочу отметить что мастера всегда советовались и предлагали как сделать правильно и вышло лучше чем мы планировали! Очень порядочные и аккуратные мастера. Мы очень рады что нашли вас, рекомендую всем кто действительно хочет сделать ремонт качественно! Спасибо!!!</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Ц</span><span><b>Цветкова</b><small>9 июля 2026</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Ремонт квартиры</div>
+          <p>Обратились в компанию Наш ремонт для проведения ремонта в квартире. Меньше чем за полтора месяца работы были выполнены, чем мы очень довольны. Ребята молодцы, всегда на связи, проблем не было. Отдельная благодарность мастеру Вячеславу всё сделал аккуратно и на совесть! Всем рекомендую!</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Е</span><span><b>Елена Шергина</b><small>12 августа 2025</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Ремонт квартиры</div>
+          <p>Отличные мастера своего дела. Работают по договору. Сделали ремонт квартиры быстро и качественно, учитывая все пожелания. Соблюдают «режим тишины», убирают мусор. Цены на выполнение работ адекватные. Очень благодарна за прекрасно выполненную работу! Спасибо!!! Рекомендую!</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Яндекс Карты</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Ю</span><span><b>Юлия Б.</b><small>3 июля 2026</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Керамогранит в деревянном доме</div>
+          <p>Очень качественно положили керамогранит, с учётом того что у нас очень криво косо залита была стяжка, мастеру похвала и уважение, сделали быстро, раньше срока, стоимость приемлемая, всё в уровень, швы идеальные, косяков я не нашла. Спасибо за качественно выполненную работу!!!!</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">А</span><span><b>Александр Спиридонов</b><small>6 февраля 2025</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Ремонт квартиры и ванной</div>
+          <p>В день обращения сразу приехали и сделали замеры. Закупили все необходимые материалы и на следующий день приступили к работе. Очень отзывчивые и вежливые мастера. Спасибо за качественно выполненную работу.</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">Т</span><span><b>Татьяна</b><small>19 мая 2025</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Обои и малярные работы</div>
+          <p>Приехали, оценили фронт работ, составили договор. Качественно, быстро и в оговоренные сроки выполнили работу. Большое спасибо 👍</p>
+          
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><span>Авито</span><span>Отзывы</span></div>
+        <div class="ph-card">
+          <div class="ph-who"><span class="ph-ava">О</span><span><b>Ольга</b><small>24 октября 2025</small></span></div>
+          <div class="ph-stars" aria-label="5 из 5">★★★★★</div>
+          <div class="ph-what">Стены и обои</div>
+          <p>Работа по выравниванию стен и поклейке обоев выполнена качественно, в срок. Работой мастера я очень довольна, стоимость меня устроила.</p>
+          
+        </div>
+      </div></div>
+  </div>
+</section>
+
+<section class="sec faq-sec" id="faq">
+  <div class="wrap faq-wrap">
     <div class="sec-head">
-      <h2>Ремонт делают один раз</h2>
-      <p class="lead">Так, чтобы ничего не потрескалось, не отвалилось и не отклеилось.</p>
+      <h2>Вопросы и ответы</h2>
+      <p class="lead">Не нашли ответ — позвоните: 47-67-06.</p>
     </div>
-    <div class="trust">
-      <div><b>Договор</b><p>Цена фиксируется договором и по итогу не меняется.</p></div>
-      <div><b>Гарантия</b><p>Отвечаем за качество после сдачи. Срок: <span class="slot">{{срок гарантии}}</span></p></div>
-      <div><b>Замер бесплатно</b><p>Выезд мастера на замер ничего не стоит.</p></div>
-      <div><b>Материалы дешевле</b><p>Скидки от партнёров и оптовых поставщиков до 30%.</p></div>
+    <div class="faq">
+      <details><summary>Сколько стоят замер и смета?</summary><p>Нисколько. Мастер бесплатно приедет на объект, выслушает пожелания и посчитает, куда пойдёт каждый рубль.</p></details>
+      <details><summary>Может ли цена вырасти во время ремонта?</summary><p>Нет. Объём, сроки и цена фиксируются в договоре и по итогу не меняются.</p></details>
+      <details><summary>Нужно ли самим покупать материалы?</summary><p>Не обязательно. Поможем выбрать, купим и привезём. У партнёров и оптовых поставщиков скидка до 30%.</p></details>
+      <details><summary>Можно заказать не всю квартиру, а отдельные работы?</summary><p>Да. Берём объекты под ключ и частично: только ванную, только стены и обои, только полы.</p></details>
+      <details><summary>Сколько длится ремонт?</summary><p>Зависит от объёма, срок пишем в договоре. Например, полный ремонт однокомнатной квартиры без санузла мы сделали за две недели.</p></details>
+      <details><summary>Кто убирает мусор?</summary><p>Мы. Мусор убираем по ходу работ и соблюдаем время тишины, если дом жилой.</p></details>
+      <details><summary>Поможете с перепланировкой?</summary><p>Да: демонтаж и монтаж перегородок, объединение кухни с гостиной, расширение санузла. Поможем согласовать изменения.</p></details>
+      <details><summary>Как можно оплатить?</summary><p>Картой или наличными. Оплату фиксируем в договоре.</p></details>
+      <details><summary>Даёте гарантию?</summary><p>Да. Работаем по договору и отвечаем за качество работ и после сдачи.</p></details>
     </div>
-  </div>
-</section>
-
-<section class="sec steps-sec" id="about">
-  <div class="wrap about">
-    <figure class="about-photo"><img src="img/team-primer.webp" alt="Мастерица грунтует стену из газоблока валиком на длинной ручке" loading="lazy" width="750" height="1000"></figure>
-    <div>
-      <h2>Команда из Архангельска</h2>
-      <p>В команде мастера и мастерицы, у каждого своё дело: штукатурка и шпатлёвка, плитка, полы, электрика и сантехника.</p>
-      <p>Больше 10 лет и больше 260 объектов: квартиры в новостройках и на вторичке, санузлы, дизайнерские и бюджетные ремонты под сдачу.</p>
-      <p><span class="slot">{{2–3 предложения от Оксаны: кто в команде, чем отличаетесь}}</span></p>
-      <p class="warn">Сомнительно дёшево сделать могут только дилетанты, а потом приходится переделывать. Выбирайте подрядчика ответственно.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="reviews">
-  <div class="wrap">
-    <h2 style="margin-bottom:48px">Отзывы клиентов</h2>
-    <blockquote class="rev-main">«Ремонт сделали согласно договору и смете, не было непредсказуемых трат, что очень важно».</blockquote>
-    <p class="rev-main-who">Николай Николаевич, ремонт квартиры. Яндекс Карты, 3 июля 2026</p>
-    <div class="rev-grid">
-      <article class="rev">
-        <blockquote>«Отличная работа Ксении и её мастеров! За две недели выполнили полный ремонт 1-к квартиры — электрика, полы (ламинат и линолеум), потолки (натяжные), стены (обои), и все работы по демонтажу (без санузла). Работы по договору, по заранее обговоренной смете и в срок. Без форс-мажоров, неявок, отговорок. Весь мусор сразу убирали и соблюдали время работы, так как дом жилой. Ксения всегда на связи и помогла с выбором материалов».</blockquote>
-        <p class="who"><b>Светлана</b>, ремонт 1-комнатной квартиры. Авито, 25 февраля 2025</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Меньше чем за полтора месяца работы были выполнены, чем мы очень довольны. Ребята молодцы, всегда на связи, проблем не было. Отдельная благодарность мастеру Вячеславу всё сделал аккуратно и на совесть! Всем рекомендую!»</blockquote>
-        <p class="who"><b>Цветкова</b>, ремонт квартиры. Яндекс Карты, 9 июля 2026</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Очень качественно положили керамогранит, с учётом того что у нас очень криво косо залита была стяжка, мастеру похвала и уважение, сделали быстро, раньше срока, стоимость приемлемая, всё в уровень, швы идеальные, косяков я не нашла».</blockquote>
-        <p class="who"><b>Юлия Б.</b>, керамогранит в деревянном доме. Яндекс Карты, 3 июля 2026</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Ремонт ванной выполнен на высоте и за короткий срок, что для меня было очень важно! Хочу отметить что мастера всегда советовались и предлагали как сделать правильно и вышло лучше чем мы планировали! Очень порядочные и аккуратные мастера».</blockquote>
-        <p class="who"><b>Клиент Авито</b>, ремонт ванной под ключ. 16 мая 2025</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Отличные мастера своего дела. Работают по договору. Сделали ремонт квартиры быстро и качественно, учитывая все пожелания. Соблюдают «режим тишины», убирают мусор. Цены на выполнение работ адекватные».</blockquote>
-        <p class="who"><b>Елена Шергина</b>, ремонт квартиры. Авито, 12 августа 2025</p>
-      </article>
-      <article class="rev">
-        <blockquote>«В день обращения сразу приехали и сделали замеры. Закупили все необходимые материалы и на следующий день приступили к работе. Очень отзывчивые и вежливые мастера».</blockquote>
-        <p class="who"><b>Александр Спиридонов</b>, ремонт квартиры и ванной. Авито, 6 февраля 2025</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Приехали, оценили фронт работ, составили договор, качественно, быстро и в оговоренные сроки выполнили работу. Большое спасибо».</blockquote>
-        <p class="who"><b>Татьяна</b>, обои и малярные работы. Авито, 19 мая 2025</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Работа по выравниванию стен и поклейке обоев выполнена качественно, в срок. Работой мастера я очень довольна, стоимость меня устроила».</blockquote>
-        <p class="who"><b>Ольга</b>, стены и обои. Авито, 24 октября 2025</p>
-      </article>
-      <article class="rev">
-        <blockquote>«Работа выполнена отлично и в короткие сроки. Спасибо большое за проделанную работу! Рекомендую!»</blockquote>
-        <p class="who"><b>Александр</b>, ремонт квартир. Авито, 13 мая 2024</p>
-      </article>
-    </div>
-    <p class="rev-count">На Авито 19 отзывов, все на пять звёзд.</p>
   </div>
 </section>
 
 <section class="sec contact" id="contacts">
   <div class="wrap">
-    <h2>Позвоните, приедем на замер</h2>
-    <a class="big-tel" href="tel:+79052934064">+7 905 293-40-64</a>
+    <h2>Превратим вашу квартиру в пространство мечты — звоните!</h2>
+    <a class="big-tel" href="tel:+78182476706"><small>+7 (8182)</small> 47-67-06</a>
     <div class="c-grid">
       <div>
-        <a class="c-row" href="tel:+78182476706"><span>Офис</span><span>+7 8182 47-67-06</span></a>
         <a class="c-row" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener"><span>Написать ВКонтакте</span><span>vk.me/nash_remont_arh</span></a>
         <div class="msg">
-          <a class="btn" href="#contacts">Telegram <span class="slot">{{ник}}</span></a>
-          <a class="btn" href="#contacts">WhatsApp <span class="slot">{{номер}}</span></a>
-          <a class="btn" href="#contacts">MAX <span class="slot">{{номер}}</span></a>
           <a class="btn" href="https://vk.com/nash_remont_arh" target="_blank" rel="noopener">Группа ВКонтакте</a>
         </div>
       </div>
       <div class="addr">
         <h3>Архангельск, Московский проспект, 25,&nbsp;корп.&nbsp;4</h3>
         <p>3 этаж, офис 306</p>
-        <p>Время работы: <span class="slot">{{график}}</span></p>
         <a class="btn btn-line" href="https://yandex.ru/maps/org/nash_remont/169624413226/" target="_blank" rel="noopener">Открыть на Яндекс Картах</a>
       </div>
     </div>
@@ -628,7 +785,6 @@ footer a{color:#D3DED6}
 <footer>
   <div class="wrap">
     <span class="f-brand"><img src="img/logo.png" alt="Логотип «Наш ремонт»" width="56" height="56" loading="lazy"><span>© «Наш ремонт», ИП Дедкова Оксана Владимировна, ОГРНИП 326290000012287</span></span>
-    <a href="politika.html">Политика конфиденциальности</a>
     <span>Сайт сделала <a href="https://t.me/Ksenia_Shchetnik">Ксения Щетникова</a></span>
   </div>
 </footer>
@@ -649,18 +805,15 @@ footer a{color:#D3DED6}
   document.querySelectorAll('input[name=kind]').forEach(function(r){r.addEventListener('change',calc)});
   calc();
 
-  // заявка: пока нет приёма заявок, копируем текст и открываем сообщения ВК
-  var form=document.getElementById('leadForm'),ok=document.getElementById('formOk');
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!form.name.value.trim()||!form.phone.value.trim()){ok.textContent='Укажите имя и телефон.';ok.classList.add('show');return}
-    if(!form.agree.checked){ok.textContent='Отметьте согласие на обработку данных.';ok.classList.add('show');return}
-    var text='Заявка на замер. '+form.name.value.trim()+', '+form.phone.value.trim()+'. '+kn.textContent+', '+sum.textContent+'.';
-    try{navigator.clipboard&&navigator.clipboard.writeText(text)}catch(err){}
-    ok.textContent='Заявка скопирована. Вставьте её в открывшийся чат ВКонтакте или позвоните +7 905 293-40-64.';
-    ok.classList.add('show');
-    window.open('https://vk.me/nash_remont_arh','_blank','noopener');
-  });
+  // ванные: показать ещё
+  var mb=document.getElementById('moreBaths');
+  mb.addEventListener('click',function(){document.getElementById('bathGal').classList.add('open');mb.style.display='none'});
+
+  // отзывы: стрелки листают телефоны
+  var ph=document.getElementById('phones');
+  function step(d){var c=ph.querySelector('.phone');ph.scrollBy({left:d*(c.offsetWidth+28),behavior:'smooth'})}
+  document.getElementById('revPrev').addEventListener('click',function(){step(-1)});
+  document.getElementById('revNext').addEventListener('click',function(){step(1)});
 
   // лазер: линия под заголовком
   var hero=document.getElementById('hero'),h1=document.getElementById('h1');
