@@ -128,7 +128,7 @@ label.kind:has(input:focus-visible){outline:2px solid var(--yellow);outline-offs
 .extra li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:15px;break-inside:avoid}
 .extra li span:last-child{white-space:nowrap;color:var(--yellow)}
 .note{margin-top:22px;font-size:15px;color:#BDB6A8;max-width:42em}
-.calc-box{position:sticky;top:96px;background:#fff;color:var(--ink);border-radius:8px;padding:30px;border-top:6px solid var(--yellow)}
+.calc-box{position:sticky;top:96px;background:#fff;color:var(--ink);border-radius:8px;padding:30px;border:4px solid var(--laser);box-shadow:0 0 22px rgba(59,240,122,.35)}
 .calc-box h3{font-size:30px}
 .area{margin-top:20px}
 .area-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px;font-size:15px;color:var(--soft)}
@@ -212,7 +212,7 @@ input[type=range]{width:100%;accent-color:var(--green);height:30px}
 
 /* мастера */
 .team-sec{background:var(--putty)}
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.team{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px}
 .team figure{position:relative;overflow:hidden;border-radius:6px}
 .team img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
 .team .big{grid-column:span 2;grid-row:span 2}
@@ -261,7 +261,9 @@ input[type=range]{width:100%;accent-color:var(--green);height:30px}
 
 /* контакты */
 .contact{background:var(--olive);color:#fff}
-.contact .big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
+.contact .contact .big-tel.tel2{display:block;font-size:64px;margin-top:14px;color:#fff}
+.contact .big-tel.tel2:hover{color:var(--yellow)}
+.big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
 .big-tel{color:var(--yellow)}
 .big-tel small{font-size:.4em;vertical-align:.9em;letter-spacing:0;opacity:.85}
 .big-tel{display:inline-block;font:800 120px/.9 var(--cond);text-decoration:none;letter-spacing:-.015em;margin-top:28px}
@@ -304,8 +306,7 @@ footer a{color:#D3DED6}
   .extra{margin-top:12px}
   .calc-box{position:static}
   .works,.rev-grid{grid-template-columns:1fr 1fr}
-  .team{grid-template-columns:repeat(3,1fr)}
-  .baths{grid-template-columns:repeat(3,1fr)}
+  .team,.baths{grid-template-columns:1fr 1fr}
   .baths .big.alt{grid-column:span 2}
   .trust{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr;padding:0 0 0 30px}
@@ -447,16 +448,17 @@ footer a{color:#D3DED6}
       <p>С гидроизоляцией и облицовкой кафельной плиткой и керамогранитом. Душевые с трапом и стеклом, ниши с подсветкой, зеркала с подсветкой, подвесная сантехника.</p>
     </div>
     <div class="baths" id="bathGal">
-      <figure class="big"><img src="img/bath-green.webp" alt="Санузел с зелёной плиткой ёлочкой в душевой и плиткой с узором на полу" loading="lazy"></figure>
+      <figure class="big"><img src="img/b-black-marble.webp" alt="Ванная в чёрном мраморе с золотой сантехникой и круглым зеркалом с подсветкой" loading="lazy"></figure>
       <figure><img src="img/b-oval.webp" alt="Раковина и овальное зеркало с подсветкой, душевая с плиткой терраццо" loading="lazy"></figure>
       <figure><img src="img/bath-shower.webp" alt="Душевая со стеклом, нишами с подсветкой и зеркалом необычной формы" loading="lazy"></figure>
       <figure><img src="img/b-drop.webp" alt="Санузел с зеркалом-каплей с подсветкой" loading="lazy"></figure>
-      <figure><img src="img/bath-graphite.webp" alt="Ванная с плиткой под бетон и овальным зеркалом с подсветкой" loading="lazy"></figure>
+      <figure><img src="img/b-leaf-gold.webp" alt="Ванная со стеной в тропических листьях, мрамором и золотой сантехникой" loading="lazy"></figure>
       <figure class="big alt"><img src="img/b-terrazzo.webp" alt="Душевая с плиткой терраццо и круглым зеркалом с подсветкой" loading="lazy"></figure>
       <figure><img src="img/b-herring.webp" alt="Душевая со стеклом и плиткой ёлочкой" loading="lazy"></figure>
       <figure><img src="img/b-tub-green.webp" alt="Ванна с зелёной вертикальной плиткой и чёрным душем" loading="lazy"></figure>
       <figure><img src="img/bath-wood.webp" alt="Ванная с акцентной стеной под дерево" loading="lazy"></figure>
-      <figure><img src="img/b-wood-niche.webp" alt="Ниша с деревянной отделкой и подсветкой" loading="lazy"></figure>
+      <figure><img src="img/bath-green.webp" alt="Санузел с зелёной плиткой ёлочкой в душевой и плиткой с узором на полу" loading="lazy"></figure>
+      <figure class="more"><img src="img/b-wood-niche.webp" alt="Ниша с деревянной отделкой и подсветкой" loading="lazy"></figure>
       <figure class="more"><img src="img/b-terrazzo-wc.webp" alt="Санузел с плиткой терраццо и подвесным унитазом" loading="lazy"></figure>
       <figure class="more"><img src="img/b2-drop-shower.webp" alt="Душевая и зеркало-капля с подсветкой" loading="lazy"></figure>
       <figure class="more"><img src="img/b2-shelf.webp" alt="Душевая с плиткой ёлочкой и деревянной полкой" loading="lazy"></figure>
@@ -472,7 +474,6 @@ footer a{color:#D3DED6}
       <figure class="more"><img src="img/b2-sage-wc.webp" alt="Санузел с зелёной вертикальной плиткой и подвесным унитазом" loading="lazy"></figure>
       <figure class="more"><img src="img/b2-drop-wc.webp" alt="Санузел с зеркалом-каплей и подвесным унитазом" loading="lazy"></figure>
       <figure class="more"><img src="img/b2-marble-wood.webp" alt="Ванная под мрамор с полом под дерево" loading="lazy"></figure>
-      <figure class="more"><img src="img/b2-terrazzo-base.webp" alt="Поддон душевой с плиткой терраццо и плинтусом под дерево" loading="lazy"></figure>
     </div>
     <button type="button" class="btn btn-line more-btn" id="moreBaths">Показать ещё 16 ванных</button>
     <div class="gal-head">
@@ -496,7 +497,7 @@ footer a{color:#D3DED6}
 <section class="cta-band">
   <div class="wrap">
     <p><b>Бесплатный выезд мастера на замер</b><span>Приедем, посмотрим объект и посчитаем, куда пойдёт каждый рубль.</span></p>
-    <div class="cta-btns"><a class="btn btn-dark" href="tel:+78182476706">Позвонить: 47-67-06</a><a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
+    <div class="cta-btns"><a class="btn btn-dark" href="tel:+78182476706">Позвонить: 47-67-06</a><a class="btn btn-dark" href="tel:+79052934064">8 905 293-40-64</a><a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
   </div>
 </section>
 
@@ -510,8 +511,8 @@ footer a{color:#D3DED6}
         <div class="kinds" role="radiogroup" aria-label="Вид ремонта">
           <label class="kind"><input type="radio" name="kind" value="5000" data-name="Косметический"><b>Косметический</b><span class="pr">от 5 000 ₽<small>/м²</small></span><p>Недорого освежить квартиру: стены, потолки, полы без переноса коммуникаций.</p></label>
           <label class="kind"><input type="radio" name="kind" value="8000" data-name="В новостройке" checked><b>В новостройке</b><span class="pr">от 8 000 ₽<small>/м²</small></span><p>Все этапы: от зачистки стяжки и черновых коммуникаций до чистовой отделки.</p></label>
-          <label class="kind"><input type="radio" name="kind" value="9000" data-name="Дизайнерский"><b>Дизайнерский</b><span class="pr">от 9 000 ₽<small>/м²</small></span><p>Ремонт с дизайнерскими решениями под ваш стиль.</p></label>
           <label class="kind"><input type="radio" name="kind" value="10000" data-name="Капитальный"><b>Капитальный</b><span class="pr">от 10 000 ₽<small>/м²</small></span><p>Полностью обновляем жильё: демонтаж, электрика, сантехника, выравнивание, отделка.</p></label>
+          <label class="kind"><input type="radio" name="kind" value="12000" data-name="Дизайнерский"><b>Дизайнерский</b><span class="pr">от 12 000 ₽<small>/м²</small></span><p>Ремонт с дизайнерскими решениями под ваш стиль.</p></label>
           <label class="kind"><input type="radio" name="kind" value="3000" data-name="Перепланировка"><b>Перепланировка</b><span class="pr">от 3 000 ₽<small>/м²</small></span><p>Объединить кухню с гостиной, расширить санузел, сделать гардеробную. Поможем согласовать.</p></label>
         </div>
         <div class="extra">
@@ -552,6 +553,7 @@ footer a{color:#D3DED6}
         <div class="call-box"><span id="calc-form" class="anchor"></span>
           <p class="call-title">Бесплатный выезд мастера на замер</p>
           <a class="btn btn-main" href="tel:+78182476706">Позвонить: 47-67-06</a>
+          <a class="btn btn-main" href="tel:+79052934064">Позвонить: 8 905 293-40-64</a>
           <a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a>
         </div>
       </div>
@@ -566,20 +568,27 @@ footer a{color:#D3DED6}
       <p class="lead">Больше 10 лет и больше 260 объектов в Архангельске. В команде мастера и мастерицы, у каждого своё дело: штукатурка и шпатлёвка, плитка, полы, электрика и сантехника. Стены выводим по лазерному уровню, плитку режем на месте.</p>
     </div>
     <div class="team">
-      <figure class="big"><img src="img/t-uniform.webp" alt="Мастер в форме «Наш ремонт» выставляет крупную плитку на системе выравнивания" loading="lazy"><figcaption>Крупная плитка</figcaption></figure>
       <figure><img src="img/t-floor-tile.webp" alt="Мастер укладывает плитку на пол с системой выравнивания" loading="lazy"><figcaption>Плитка на пол</figcaption></figure>
       <figure><img src="img/t-marble.webp" alt="Мастер монтирует керамогранит под чёрный мрамор" loading="lazy"><figcaption>Керамогранит</figcaption></figure>
       <figure><img src="img/t-measure.webp" alt="Мастер замеряет стену рулеткой перед укладкой" loading="lazy"><figcaption>Всё по замерам</figcaption></figure>
       <figure><img src="img/team-beacon.webp" alt="Мастерица ставит маяк на стену по лазерной линии" loading="lazy"><figcaption>Маяки по лазеру</figcaption></figure>
-      <figure class="wide"><img src="img/t-waterproof.webp" alt="Мастер проклеивает гидроизоляционную ленту в душевой" loading="lazy"><figcaption>Гидроизоляция</figcaption></figure>
+      <figure><img src="img/t-waterproof.webp" alt="Мастер проклеивает гидроизоляционную ленту в душевой" loading="lazy"><figcaption>Гидроизоляция</figcaption></figure>
       <figure><img src="img/t-tilecutter.webp" alt="Мастер режет плитку на плиткорезе" loading="lazy"><figcaption>Рез плитки</figcaption></figure>
+      <figure><img src="img/t-tile-cut.webp" alt="Мастер режет крупноформатную плитку болгаркой" loading="lazy"><figcaption>Рез плитки</figcaption></figure>
+      <figure><img src="img/t-floor-mark.webp" alt="Мастер размечает пол на подложке" loading="lazy"><figcaption>Разметка пола</figcaption></figure>
       <figure><img src="img/team-plaster-2.webp" alt="Мастерица выравнивает штукатурку правилом" loading="lazy"><figcaption>Штукатурка</figcaption></figure>
       <figure><img src="img/t-sanding.webp" alt="Мастерица шлифует стену машинкой" loading="lazy"><figcaption>Шлифовка</figcaption></figure>
       <figure><img src="img/team-mesh-2.webp" alt="Мастерица шпатлюет стену по армирующей сетке" loading="lazy"><figcaption>Армирующая сетка</figcaption></figure>
       <figure><img src="img/t-wallpaper.webp" alt="Мастерица разглаживает обои" loading="lazy"><figcaption>Обои</figcaption></figure>
       <figure><img src="img/t-laminate.webp" alt="Мастер режет ламинат лобзиком" loading="lazy"><figcaption>Ламинат</figcaption></figure>
       <figure><img src="img/team-floor-laser.webp" alt="Мастер укладывает плитку на пол по лучу лазерного уровня" loading="lazy"><figcaption>Пол по лазеру</figcaption></figure>
-      <figure><img src="img/team-laser-wall.webp" alt="Стена с маяками и лучами лазерного уровня" loading="lazy"><figcaption>Ровные стены</figcaption></figure>
+      <figure><img src="img/t2-floor-plitonit.webp" alt="Мастер укладывает плитку под дерево на пол" loading="lazy"><figcaption>Плитка под дерево</figcaption></figure>
+      <figure><img src="img/t2-floor-mortar.webp" alt="Мастер наносит клей для плитки на пол" loading="lazy"><figcaption>Клей по технологии</figcaption></figure>
+      <figure class="wide"><img src="img/t2-sanding.webp" alt="Мастерица шлифует стену шлифовальной машинкой" loading="lazy"><figcaption>Ровные стены</figcaption></figure>
+      <figure><img src="img/t2-wallpaper-hang.webp" alt="Мастерица клеит обои" loading="lazy"><figcaption>Поклейка обоев</figcaption></figure>
+      <figure><img src="img/t2-wallpaper-trim.webp" alt="Мастерица аккуратно подрезает обои у потолка" loading="lazy"><figcaption>Подрезка у потолка</figcaption></figure>
+      <figure><img src="img/t2-paint-roller.webp" alt="Мастерица красит стену валиком" loading="lazy"><figcaption>Покраска стен</figcaption></figure>
+      <figure><img src="img/t2-paint-corner.webp" alt="Мастерица прокрашивает угол под потолком" loading="lazy"><figcaption>Аккуратные углы</figcaption></figure>
       <figure class="wide"><img src="img/t-slab-table.webp" alt="Мастер режет плиту керамогранита на столе" loading="lazy"><figcaption>Большие форматы</figcaption></figure>
     </div>
   </div>
@@ -588,7 +597,7 @@ footer a{color:#D3DED6}
 <section class="cta-band">
   <div class="wrap">
     <p><b>Мастера со стажем более 10 лет приедут на замер бесплатно</b><span>Позвоните или напишите ВКонтакте — договоримся об удобном времени.</span></p>
-    <div class="cta-btns"><a class="btn btn-dark" href="tel:+78182476706">Позвонить: 47-67-06</a><a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
+    <div class="cta-btns"><a class="btn btn-dark" href="tel:+78182476706">Позвонить: 47-67-06</a><a class="btn btn-dark" href="tel:+79052934064">8 905 293-40-64</a><a class="btn btn-line" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener">Написать ВКонтакте</a></div>
   </div>
 </section>
 
@@ -616,7 +625,7 @@ footer a{color:#D3DED6}
       <p class="lead">Сначала приезжаем и слушаем пожелания. Начинаем, только если вас всё устраивает.</p>
     </div>
     <ol class="steps">
-      <li><span class="n">1</span><h3>Звонок</h3><p>Позвоните на 47-67-06 или напишите ВКонтакте.</p></li>
+      <li><span class="n">1</span><h3>Звонок</h3><p>Позвоните на 47-67-06 или 8 905 293-40-64, напишите ВКонтакте.</p></li>
       <li><span class="n">2</span><h3>Бесплатный замер</h3><p>Мастер приезжает и смотрит объект.</p></li>
       <li><span class="n">3</span><h3>Смета</h3><p>Считаем, куда будет потрачен каждый рубль.</p></li>
       <li><span class="n">4</span><h3>Договор</h3><p>Объём, сроки и цена. По итогу цена не меняется.</p></li>
@@ -745,7 +754,7 @@ footer a{color:#D3DED6}
   <div class="wrap faq-wrap">
     <div class="sec-head">
       <h2>Вопросы и ответы</h2>
-      <p class="lead">Не нашли ответ — позвоните: 47-67-06.</p>
+      <p class="lead">Не нашли ответ — позвоните: 47-67-06 или 8 905 293-40-64.</p>
     </div>
     <div class="faq">
       <details><summary>Сколько стоят замер и смета?</summary><p>Нисколько. Мастер бесплатно приедет на объект, выслушает пожелания и посчитает, куда пойдёт каждый рубль.</p></details>
@@ -765,6 +774,7 @@ footer a{color:#D3DED6}
   <div class="wrap">
     <h2>Превратим вашу квартиру в пространство мечты — звоните!</h2>
     <a class="big-tel" href="tel:+78182476706"><small>+7 (8182)</small> 47-67-06</a>
+    <a class="big-tel tel2" href="tel:+79052934064">8 905 293-40-64</a>
     <div class="c-grid">
       <div>
         <a class="c-row" href="https://vk.me/nash_remont_arh" target="_blank" rel="noopener"><span>Написать ВКонтакте</span><span>vk.me/nash_remont_arh</span></a>
